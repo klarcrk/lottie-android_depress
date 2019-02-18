@@ -108,7 +108,7 @@ public class ImageAssetManager {
             " Set it with LottieComposition#setImagesFolder or LottieDrawable#setImagesFolder");
       }
       is = context.getAssets().open(imagesFolder + filename);
-    } catch (IOException e) {
+    } catch (Exception e) {
       Log.w(L.TAG, "Unable to open asset.", e);
       return null;
     }

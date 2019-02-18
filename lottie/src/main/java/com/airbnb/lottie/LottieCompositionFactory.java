@@ -98,7 +98,7 @@ public class LottieCompositionFactory {
         return fromZipStreamSync(new ZipInputStream(context.getAssets().open(fileName)), cacheKey);
       }
       return fromJsonInputStreamSync(context.getAssets().open(fileName), cacheKey);
-    } catch (IOException e) {
+    } catch (Exception e) {
       return new LottieResult<>(e);
     }
   }
@@ -278,7 +278,7 @@ public class LottieCompositionFactory {
 
         entry = inputStream.getNextEntry();
       }
-    } catch (IOException e) {
+    } catch (Exception e) {
       return new LottieResult<>(e);
     }
 

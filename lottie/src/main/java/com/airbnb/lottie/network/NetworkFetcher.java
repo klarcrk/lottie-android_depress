@@ -91,7 +91,7 @@ public class NetworkFetcher {
   private LottieResult<LottieComposition> fetchFromNetwork() {
     try {
       return fetchFromNetworkInternal();
-    } catch (IOException e) {
+    } catch (Exception e) {
       return new LottieResult<>(e);
     }
   }

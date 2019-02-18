@@ -70,7 +70,7 @@ public class LottieSnapshotProvider extends SnapshotProvider {
         lottiefiles[i] = "lottiefiles/" + lottiefiles[i];
       }
       snapshotAssets(lottiefiles);
-    } catch (IOException e) {
+    } catch (Exception e) {
       onError(e);
     }
     testFrameBoundary();
