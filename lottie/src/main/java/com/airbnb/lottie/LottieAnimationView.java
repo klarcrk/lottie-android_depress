@@ -65,7 +65,8 @@ import java.util.Set;
 
   private final LottieListener<Throwable> failureListener = new LottieListener<Throwable>() {
     @Override public void onResult(Throwable throwable) {
-      throw new IllegalStateException("Unable to parse composition", throwable);
+//      throw new IllegalStateException("Unable to parse composition", throwable);
+      throwable.printStackTrace();
     }
   };
 
